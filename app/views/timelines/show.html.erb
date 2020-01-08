@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @timeline.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @timeline.description %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @timeline.icon %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @timeline.link %>
+</p>
+
+<p>
+  <strong>Dates:</strong>
+  <%= @timeline.dates %>
+</p>
+
+<%= link_to 'Edit', edit_timeline_path(@timeline) %> |
+<%= link_to 'Back', timelines_path %>
