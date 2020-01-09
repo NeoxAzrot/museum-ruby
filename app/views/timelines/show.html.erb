@@ -36,7 +36,7 @@
   <div class="container">
     <h1 class="display-4"><%= @timeline.title %></h1>
     <p class="lead"><%= @timeline.description %></p>
-    <a href="./"><button type="button" class="btn btn-primary">Revenir à l'accueil</button></a>
+    <a href="./" class="btn btn-primary">Revenir à l'accueil</a>
   </div>
 </section>
 
@@ -56,17 +56,17 @@
         <% if index == 0 %>
           <div class="carousel-item active" style="background-image: url('<%= art.image %>');">
             <div class="opacity_shadow_slideshow"></div>
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption">
               <h2 class="display-4"><%= art.title %></h2>
-              <p class="lead"><%= art.description %></p>
+              <p class="lead d-none d-md-block"><%= art.description %></p>
             </div>
           </div>
         <% else %>
           <div class="carousel-item" style="background-image: url('<%= art.image %>');">
             <div class="opacity_shadow_slideshow"></div>
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption">
               <h2 class="display-4"><%= art.title %></h2>
-              <p class="lead"><%= art.description %></p>
+              <p class="lead d-none d-md-block"><%= art.description %></p>
             </div>
           </div>
         <% end %>
@@ -85,9 +85,37 @@
 
 <% else %>
 
-  <% @timeline.arts.sort.each do |art| %>
-    <%= art.title %>
-    <br/>
-  <% end %>
+<div id="show_page">
+  <section id="header" class="jumbotron text-center">
+     <h1 class="display-3"><%= @timeline.title %></h1>
+     <p class="lead"><%= @timeline.description %></p>
+     <a href="./" class="btn btn-primary no-border">Revenir à l'accueil</a>
+  </section>
+    
+  <section id="gallery">
+    <div class="container">
+      <div class="row">
+        <% @timeline.arts.sort.each do |art| %>
+    
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img src="<%= art.image %>" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title"><%= art.title %></h5>
+                <p class="card-text"><%= art.description %></p>
+                <div class="footer-card">
+                  <p class="author-text"><%= art.author %></p>
+                  <p class="date-text"><%= art.date %></p>
+                </div>
+              </div>
+           </div>
+        </div>
+
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>
+
 
 <% end %>

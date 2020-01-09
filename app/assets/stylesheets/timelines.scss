@@ -286,7 +286,7 @@ a {
 	font-family: 'Roboto' !important;
 }
 
-button {
+a {
 	background: $primary !important;
 	color: $text !important;
 	padding: 8px 20px !important;
@@ -299,8 +299,20 @@ button {
 	box-shadow: 0 1px 3px -1px rgba(0, 0, 0, .6) !important;
 }
 
-button:hover {
+a:hover {
 	background: darken($primary, 10%) !important;
 	color: $text !important;
 	text-decoration: none !important;
+}
+
+#header {
+  background: url(https://images.unsplash.com/photo-1415795854641-f4a487a0fdc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80) center center / cover no-repeat ;
+}
+
+#show_page .display-3 {
+	text-transform: uppercase;
+}
+
+#show_page .no-border {
+	border: none;
 }
