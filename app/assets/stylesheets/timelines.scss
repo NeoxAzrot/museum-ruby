@@ -6,29 +6,29 @@ $primary-text: #212121;
 $secondary-text: #757575;
 $accent: #FF4081;
 
-section {
+#index_style section {
   padding: 100px 0;
 }
 
-html, body {
+#index_style html, body {
   overflow-x: hidden;
 }
 
-body {
+#index_style body {
   font-family: 'Roboto' !important;
   font-size: 17px !important;
   font-weight: 400;
   background-color: #eee;
 }
 
-h1 {
+#index_style h1 {
   font-size: 200%;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 400;
 }
 
-header {
+#index_style header {
 	background: $primary;
 	color: $text;
 	padding: 150px 0;
@@ -43,7 +43,7 @@ header {
 	}
 }
 
-.timeline {
+#index_style .timeline {
 
 	position: relative;
 
@@ -58,7 +58,7 @@ header {
 	}
 }
 
-.timeline-item {
+#index_style .timeline-item {
 	width: 100%;
 	margin-bottom: 70px;
 
@@ -95,7 +95,7 @@ header {
 }
 
 
-.timeline-content {
+#index_style .timeline-content {
 	position: relative;
 	width: 45%;
 	padding: 10px 30px;
@@ -116,7 +116,7 @@ header {
 	}
 }
 
-.timeline-img {
+#index_style .timeline-img {
 	width: 30px;
 	height: 30px;
 	background: $primary;
@@ -127,7 +127,7 @@ header {
 	margin-left: -15px;
 }
 
-a {
+#index_style a {
 	background: $primary !important;
 	color: $text !important;
 	padding: 8px 20px !important;
@@ -147,7 +147,7 @@ a {
 
 }
 
-.timeline-card {
+#index_style .timeline-card {
 	padding: 0 !important;
 
 	p {
@@ -159,14 +159,14 @@ a {
 	}
 }
 
-.timeline-item {
+#index_style .timeline-item {
   .timeline-img-header {
 			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('https://picsum.photos/1000/800/?random') center center no-repeat;
 			background-size: cover;
 		}
 }
 
-.opacity_shadow {
+#index_style .opacity_shadow {
 	background: #000;
 	opacity: 0.3;
 	z-index: 1;
@@ -174,15 +174,15 @@ a {
 	height: 100%;
 }
 
-.timeline-content {
+#index_style .timeline-content {
 	transition: box-shadow 0.4s ease;
 }
 
-.timeline-content:hover {
+#index_style .timeline-content:hover {
 	box-shadow: 2px 5px 25px 2px rgba(0, 0, 0, .6);
 }
 
-.timeline-img-header {
+#index_style .timeline-img-header {
 
 	height: 200px;
 	position: relative;
@@ -196,14 +196,14 @@ a {
 	}
 }
 
-blockquote {
+#index_style blockquote {
 	margin-top: 30px;
 	color: $secondary-text;
 	border-left-color: $primary;
 	padding: 0 20px;
 }
 
-.date {
+#index_style .date {
 	background: $accent;
 	display: inline-block;
 	color: $text;
@@ -215,7 +215,7 @@ blockquote {
 
 @media screen and (max-width: 768px) {
 
-	.timeline {
+	#index_style .timeline {
 
 		&::before {
 			left: 50px;
@@ -262,4 +262,14 @@ blockquote {
 		}
 	}
 	
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

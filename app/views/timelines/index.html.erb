@@ -1,56 +1,58 @@
-<header>
-  <div class="container text-center">
-    <h1>L'évolution de l'art</h1>
-    <p>dans le monde</p>
-  </div>
-</header>
+<div id="index_style">
+  <header>
+    <div class="container text-center">
+      <h1>L'évolution de l'art</h1>
+      <p>dans le monde</p>
+    </div>
+  </header>
 
-<section class="timeline">
-  <div class="container">
+  <section class="timeline">
+    <div class="container">
 
-    <% @timelines.sort.each_with_index do |timeline, index| %>
-      <% if index % 2 == 0%>
+      <% @timelines.sort.each_with_index do |timeline, index| %>
+        <% if index % 2 == 0%>
 
-        <div class="timeline-item">
+          <div class="timeline-item">
 
-          <div class="timeline-img"></div>
+            <div class="timeline-img"></div>
 
-          <div class="timeline-content timeline-card js--fadeInLeft">
-            <div class="timeline-img-header" style="background: url('<%= timeline.icon %>') center center no-repeat; background-size: cover;">
-              <div class="opacity_shadow"></div>
-              <h2><%= timeline.title %></h2>
+            <div class="timeline-content timeline-card js--fadeInLeft">
+              <div class="timeline-img-header" style="background: url('<%= timeline.icon %>') center center no-repeat; background-size: cover;">
+                <div class="opacity_shadow"></div>
+                <h2><%= timeline.title %></h2>
+              </div>
+              <div class="date"><%= timeline.dates %></div>
+              <p><%= timeline.description %></p>
+              <%= link_to 'Voir les oeuvres', timeline %>
             </div>
-            <div class="date"><%= timeline.dates %></div>
-            <p><%= timeline.description %></p>
-            <%= link_to 'Voir les oeuvres', timeline %>
-          </div>
 
-        </div>  
+          </div>  
 
-      <% else %>
+        <% else %>
 
-        <div class="timeline-item">
+          <div class="timeline-item">
 
-          <div class="timeline-img"></div>
+            <div class="timeline-img"></div>
 
-          <div class="timeline-content timeline-card js--fadeInRight">
-            <div class="timeline-img-header" style="background: url('<%= timeline.icon %>') center center no-repeat; background-size: cover;">
-              <div class="opacity_shadow"></div>
-              <h2><%= timeline.title %></h2>
+            <div class="timeline-content timeline-card js--fadeInRight">
+              <div class="timeline-img-header" style="background: url('<%= timeline.icon %>') center center no-repeat; background-size: cover;">
+                <div class="opacity_shadow"></div>
+                <h2><%= timeline.title %></h2>
+              </div>
+              <div class="date"><%= timeline.dates %></div>
+              <p><%= timeline.description %></p>
+              <!-- <a class="bnt-more" href="">Voir les oeuvres</a> -->
+              <%= link_to 'Voir les oeuvres', timeline %>
             </div>
-            <div class="date"><%= timeline.dates %></div>
-            <p><%= timeline.description %></p>
-            <!-- <a class="bnt-more" href="">Voir les oeuvres</a> -->
-            <%= link_to 'Voir les oeuvres', timeline %>
-          </div>
-        </div>  
+          </div>  
+
+        <% end %>
 
       <% end %>
 
-    <% end %>
-
-  </div>
-</section>
+    </div>
+  </section>
+</div>
 
 <!--
 <table>
