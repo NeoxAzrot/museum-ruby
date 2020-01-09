@@ -7,7 +7,7 @@
 
 <script type="text/javascript">
     function verification_password() {
-        if(prompt("Entrez le mot de passe : ") != "RubyPassword!") {
+        if(prompt("Entrez le mot de passe : ") != "<%= @timeline.password %>") {
             document.location = ".";
         }
     }

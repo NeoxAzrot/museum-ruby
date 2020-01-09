@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+# SimpleForm
+gem 'simple_form'
 # Bootstrap
 gem 'bootstrap', '~> 4.4.1'
 # JQuery

@@ -4,3 +4,13 @@
 
 <%= link_to 'Show', @art %> |
 <%= link_to 'Back', arts_path %>
+
+<script type="text/javascript">
+    function verification_password() {
+        if(prompt("Entrez le mot de passe : ") != "<%= @art.password %>") {
+            document.location = ".";
+        }
+    }
+
+    window.onload = verification_password();
+</script>

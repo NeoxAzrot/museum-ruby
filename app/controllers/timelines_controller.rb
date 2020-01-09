@@ -10,6 +10,7 @@ class TimelinesController < ApplicationController
   # GET /timelines/1
   # GET /timelines/1.json
   def show
+    @maximum = Timeline.all.length
   end
 
   # GET /timelines/new

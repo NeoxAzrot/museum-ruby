@@ -10,18 +10,20 @@
       <th>Description</th>
       <th>Image</th>
       <th>Date</th>
+      <th>Timeline</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @arts.each do |art| %>
+    <% @arts.sort.each do |art| %>
       <tr>
         <td><%= art.title %></td>
         <td><%= art.author %></td>
         <td><%= art.description %></td>
         <td><%= image_tag art.image %></td>
         <td><%= art.date %></td>
+        <td><%= art.timeline.title + " - " + art.timeline.dates %></td>
         <td><%= link_to 'Show', art %></td>
         <td><%= link_to 'Edit', edit_art_path(art) %></td>
         <td><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -33,3 +35,11 @@
 <br>
 
 <%= link_to 'New Art', new_art_path %>
+
+<!-- <script type="text/javascript">
+    function redirect() {
+        document.location = ".";
+    }
+
+    window.onload = redirect();
+</script> -->
