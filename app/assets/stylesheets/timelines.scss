@@ -15,8 +15,8 @@ html, body {
 }
 
 body {
-  font-family: 'Roboto';
-  font-size: 17px;
+  font-family: 'Roboto' !important;
+  font-size: 17px !important;
   font-weight: 400;
   background-color: #eee;
 }
@@ -128,8 +128,8 @@ header {
 }
 
 a {
-	background: $primary;
-	color: $text;
+	background: $primary !important;
+	color: $text !important;
 	padding: 8px 20px;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -148,7 +148,7 @@ a {
 }
 
 .timeline-card {
-	padding: 0!important;
+	padding: 0 !important;
 
 	p {
 		padding: 0 20px;
