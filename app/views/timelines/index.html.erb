@@ -8,7 +8,7 @@
 <section class="timeline">
   <div class="container">
 
-    <% @timelines.each_with_index do |timeline, index| %>
+    <% @timelines.sort.each_with_index do |timeline, index| %>
       <% if index % 2 == 0%>
 
         <div class="timeline-item">
@@ -16,12 +16,12 @@
           <div class="timeline-img"></div>
 
           <div class="timeline-content timeline-card js--fadeInLeft">
-            <div class="timeline-img-header" style="background: url('<%= timeline.icon %>') center center no-repeat;">
+            <div class="timeline-img-header" style="background: url('<%= timeline.icon %>') center center no-repeat; background-size: cover;">
               <h2><%= timeline.title %></h2>
             </div>
             <div class="date"><%= timeline.dates %></div>
             <p><%= timeline.description %></p>
-            <a class="bnt-more" href="<%= timeline.link %>">Voir les oeuvres</a>
+            <%= link_to 'Voir les oeuvres', timeline %>
           </div>
 
         </div>  
@@ -33,12 +33,13 @@
           <div class="timeline-img"></div>
 
           <div class="timeline-content timeline-card js--fadeInRight">
-            <div class="timeline-img-header" style="background: url('<%= timeline.icon %>') center center no-repeat;">
+            <div class="timeline-img-header" style="background: url('<%= timeline.icon %>') center center no-repeat; background-size: cover;">
               <h2><%= timeline.title %></h2>
             </div>
             <div class="date"><%= timeline.dates %></div>
             <p><%= timeline.description %></p>
-            <a class="bnt-more" href="<%= timeline.link %>">Voir les oeuvres</a>
+            <!-- <a class="bnt-more" href="">Voir les oeuvres</a> -->
+            <%= link_to 'Voir les oeuvres', timeline %>
           </div>
         </div>  
 
@@ -63,7 +64,7 @@
   </thead>
 
   <tbody>
-    <% @timelines.each_with_index do |timeline, index| %>
+    <% @timelines.sort.each_with_index do |timeline, index| %>
       <tr>
         <td><%= timeline.title %></td>
         <td><%= timeline.description %></td>

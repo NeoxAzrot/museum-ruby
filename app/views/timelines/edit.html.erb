@@ -4,3 +4,13 @@
 
 <%= link_to 'Show', @timeline %> |
 <%= link_to 'Back', timelines_path %>
+
+<script type="text/javascript">
+    function verification_password() {
+        if(prompt("Entrez le mot de passe : ") != "RubyPassword!") {
+            document.location = ".";
+        }
+    }
+
+    window.onload = verification_password();
+</script>
