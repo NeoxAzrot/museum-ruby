@@ -166,6 +166,14 @@ a {
 		}
 }
 
+.timeline-content {
+	transition: box-shadow 0.4s ease;
+}
+
+.timeline-content:hover {
+	box-shadow: 2px 5px 25px 2px rgba(0, 0, 0, .6);
+}
+
 .timeline-img-header {
 
 	height: 200px;
