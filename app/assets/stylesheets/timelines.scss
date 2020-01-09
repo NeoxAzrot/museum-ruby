@@ -265,11 +265,23 @@ $accent: #FF4081;
 }
 
 .carousel-item {
-  height: 100vh;
-  min-height: 350px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	height: 100vh;
+	min-height: 350px;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.opacity_shadow_slideshow {
+	background: #000;
+	opacity: 0.3;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	font-family: 'Roboto' !important;
 }
