@@ -305,8 +305,20 @@ a:hover {
 	text-decoration: none !important;
 }
 
+.no_bg {
+	background: none !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.no_bg:hover {
+	background: none !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
 #header {
-  background: url(https://images.unsplash.com/photo-1415795854641-f4a487a0fdc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80) center center / cover no-repeat ;
+  background: url(https://i.ibb.co/PTt2dyh/igor-miske-o-Lh-TLD-RBsc-unsplash.jpg) center center / cover no-repeat ;
 }
 
 #show_page .display-3 {
@@ -315,4 +327,26 @@ a:hover {
 
 #show_page .no-border {
 	border: none;
+}
+
+.hover_card:hover {
+box-shadow: 2px 5px 25px 2px rgba(0, 0, 0, .6);
+}
+
+.hover_card {
+	transition: box-shadow 0.4s ease;
+}
+
+.header-card {
+	display: flex !important;
+	justify-content: space-between !important;
+	flex-direction: row !important;
+}
+
+.author-text {
+	color: $accent !important;
+}
+
+#header h1, #header p {
+	color: $text;
 }

@@ -72,11 +72,11 @@
         <% end %>
       <% end %>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <a class="carousel-control-prev no_bg" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <a class="carousel-control-next no_bg" href="#carouselExampleIndicators" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
@@ -98,15 +98,17 @@
         <% @timeline.arts.sort.each do |art| %>
     
           <div class="col-lg-4 mb-4">
-            <div class="card">
+            <div class="card hover_card">
               <img src="<%= art.image %>" class="card-img-top">
               <div class="card-body">
-                <h5 class="card-title"><%= art.title %></h5>
-                <p class="card-text"><%= art.description %></p>
-                <div class="footer-card">
-                  <p class="author-text"><%= art.author %></p>
+                <div class="header-card">
+                  <h5 class="card-title"><%= art.title %></h5>
                   <p class="date-text"><%= art.date %></p>
                 </div>
+                <p class="card-text"><%= art.description %></p>
+                
+                  <p class="author-text"><%= art.author %></p>
+                
               </div>
            </div>
         </div>
