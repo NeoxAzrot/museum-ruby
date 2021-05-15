@@ -59,3 +59,7 @@ To **start** the rails server
 ```bash
 rails s
 ```
+
+---
+
+[Sami Lafrance](https://www.samilafrance.com/)
